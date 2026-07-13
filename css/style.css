@@ -58,10 +58,12 @@ a{
 
 .menu-list{
     margin-left: 15px;
+     padding-left: 0;
+    margin: 0;
 }
 
 .menu-list li{
-     width: 250px;
+    width: 250px;
     height: 50px;
     padding: 10px;
     border-radius: 30px;
@@ -77,6 +79,7 @@ a{
     background: #f6c0ec;
     transform: translateX(5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    fill : brown;
 
 }
 
@@ -88,7 +91,6 @@ a{
     color: brown;
     
 }
-
 .menu-list li img{
     height: 15px;
     width: 15px;
