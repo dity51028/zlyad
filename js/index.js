@@ -7,7 +7,7 @@ var options = {
       enabled: true,
     },
   },
-  colors: ['#42c39a'], 
+  colors: ['#42c39a'],
   plotOptions: {
     radialBar: {
       startAngle: -90,
@@ -32,6 +32,9 @@ var options = {
         value: {
           offsetY: -2,
           fontSize: '22px',
+          formatter: function () {
+            return '12 / 26';
+          }
         },
       },
     },
@@ -63,7 +66,7 @@ var options2 = {
     sparkline: {
       enabled: true,
     },
-    
+
   },
   colors: ['#ea6b6b'],
   plotOptions: {
@@ -90,6 +93,9 @@ var options2 = {
         value: {
           offsetY: -2,
           fontSize: '22px',
+          formatter: function () {
+            return '20 / 26';
+          }
         },
       },
     },

@@ -16,7 +16,7 @@ body{
 
 .sidebar{
     background-color: #ffffff;
-    height: 100vh;
+    height: screen;
     width: 301px;
     margin-top:10px;
     margin-left: 10px;
@@ -243,7 +243,41 @@ a{
 }
 
 .text-secondary span {
-    color: #000;
-    
+    color: #000; 
 }
+
+.teams-customer{
+    margin-top: 20px;
+}
+
+.teams{
+    display: flex;
+    gap: 10px;
+}
+
+.teams1{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.teams-card{
+   
+    width: 210px;
+    height: 125px;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin: 8px;
+    border-radius: 12px;
+}
+
+.teams-card:nth-child(even){
+    background-color: #c1fece;
+}
+
+.teams-card:nth-child(odd){
+    background-color: #fed9c1;
+}
+
+
 
