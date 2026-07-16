@@ -7,6 +7,7 @@ var options = {
       enabled: true,
     },
   },
+  colors: ['#42c39a'], 
   plotOptions: {
     radialBar: {
       startAngle: -90,
@@ -52,7 +53,8 @@ var options = {
     },
   },
   labels: ['Average Results'],
-}
+};
+
 var options2 = {
   series: [56],
   chart: {
@@ -61,7 +63,9 @@ var options2 = {
     sparkline: {
       enabled: true,
     },
+    
   },
+  colors: ['#ea6b6b'],
   plotOptions: {
     radialBar: {
       startAngle: -90,
@@ -107,10 +111,47 @@ var options2 = {
     },
   },
   labels: ['Average Results'],
-}
+};
+
+
+var options3 = {
+  series: [40, 60],
+  chart: {
+    type: 'donut',
+    height: 180
+  },
+  labels: ['Inbound', 'Outbound'],
+  colors: ['#a97345', '#f3efec'],
+
+  legend: {
+    show: false
+  },
+
+  dataLabels: {
+    enabled: true
+  },
+
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '70%',
+        labels: {
+          show: true,
+          total: {
+            show: true,
+            label: 'Activities'
+          }
+        }
+      }
+    }
+  }
+};
+
 
 var chart = new ApexCharts(document.querySelector('#chart'), options);
 var chart2 = new ApexCharts(document.querySelector('#chart2'), options2);
+var chart3 = new ApexCharts(document.querySelector('#chart3'), options3);
 
 chart.render();
 chart2.render();
+chart3.render();

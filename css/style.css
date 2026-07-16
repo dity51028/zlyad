@@ -73,7 +73,6 @@ a{
     background: #f6c0ec;
     transform: translateX(5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    fill : brown;
 
 }
 .menu-list li a{
@@ -81,7 +80,6 @@ a{
 }
 .menu-list li a:hover{
     color: brown;
-    
 }
 .menu-list li img{
     height: 15px;
@@ -173,11 +171,12 @@ a{
 
 .status{
     display: flex;
+    gap: 8px;
 
 }
 .survey-cards{
     width: 442px;
-    height: 260px;
+    height: 230px;
 }
 
 .row1,.row2{
@@ -190,17 +189,18 @@ a{
     background:#fff;
     padding: 10px;
     width: 212px;
-    height: 126px;
+    height: 110px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .status-card:hover,
-.stats-card:hover{
+.stats-card:hover,
+.radial-chart:hover{
     cursor: pointer;
     transition: all .3s ease;
     transform: scale(1.1);
-   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); 
 }
 
 .icon-bg{
@@ -208,3 +208,42 @@ a{
     border-radius: 50px;
     padding: 8px;
 }
+
+.survey-status {
+    display: flex;
+    gap: 10px;
+}
+
+.radial-chart {
+    background: #d8d0cb;
+    border-radius: 8px;
+    padding: 12px;
+    width: 240px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radial-chart p:first-child {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.radial-chart #chart,
+.radial-chart #chart2,
+.radial-chart #chart3 {
+    flex: 1;
+}
+
+.text-secondary1 {
+    text-align: center;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.text-secondary span {
+    color: #000;
+    
+}
+
