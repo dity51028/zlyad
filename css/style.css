@@ -248,6 +248,7 @@ a{
 
 .teams-customer{
     margin-top: 20px;
+    display: flex;
 }
 
 .teams{
@@ -280,4 +281,54 @@ a{
 }
 
 
+.progress-bar, .gender{
+    height: 219px;
+    width: 715px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    margin-left: 10px;
+}
 
+
+.data{
+    display: flex;
+    gap: 20px;
+}
+
+.gender-card{
+    background:#f5f5f5;
+    padding:12px;
+    border-radius:10px;
+    width:280px;
+}
+
+.current{
+    display:flex;
+    gap:15px;
+}
+
+.graph{
+    width:120px;
+    height:55px;
+    background:#e8e8e8;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.top-labels,
+.bottom-labels{
+    display:flex;
+    justify-content:space-around;
+}
+
+.top-labels{
+    margin-bottom:8px;
+    font-size:13px;
+}
+
+.bottom-labels{
+    margin-top:8px;
+    font-size:18px;
+}

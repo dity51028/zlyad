@@ -153,11 +153,145 @@ var options3 = {
   }
 };
 
+var options4 = {
+  series: [{
+    name: 'Online',
+    data: [55]
+  }, {
+    name: 'Offline',
+    data: [45]
+  }],
+  chart: {
+    type: 'bar',
+    height: 120,
+    stacked: true,
+    toolbar: {
+      show: false
+    }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      borderRadius: 10
+    }
+  },
+  colors: ['#A9744A', '#E8E2DE'],
+  xaxis: {
+    categories: [''],
+    max: 100
+  },
+  dataLabels: {
+    enabled: true
+  },
+  legend: {
+    show: false
+  }
+};
+
+var maleOptions = {
+  series: [50],
+  chart: {
+    type: 'bar',
+    sparkline: { enabled: true },
+
+    height: 70,
+
+  },
+  colors: ['#45d0a5'],
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        size: '70%'
+      },
+      track: {
+        background: '#dcdcdc'
+      },
+      dataLabels: {
+        show: false
+      }
+    }
+  }
+};
+
+function showChart(id,colors,height,width){
+  var maleOptions = {
+  series: [
+    {
+      name: 'Value',
+      data: [100]
+    },
+    {
+      name: 'Background',
+      data: [0]
+    }
+  ],
+  chart: {
+    type: 'bar',
+    width: width,
+    height: height,
+    stacked: true,
+    stackType: '100%',
+    toolbar: {
+      show: false
+    },
+    sparkline: {
+      enabled: true
+    }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      borderRadius: 5,
+      barHeight: '100%'
+    }
+  },
+  colors: colors,
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    show: false
+  },
+  grid: {
+    show: false
+  },
+  xaxis: {
+    labels: {
+      show: false
+    }
+  },
+  yaxis: {
+    show: false
+  },
+  tooltip: {
+    enabled: false
+  }
+};
+
+new ApexCharts(
+  document.querySelector(id),
+  maleOptions
+).render();
+
+
+};
+
+showChart("#maleChart",['#3dac8b', '#E8E8E8'],10,100);
+showChart("#femaleChart",['#c2d749', '#E8E8E8'],30,100);
+showChart("#maleChart2",['#3dac8b', '#E8E8E8'],10,100);
+showChart("#femaleChart2",['#c2d749', '#E8E8E8'],30,100);
+showChart("#maleChart3",['#3dac8b', '#E8E8E8'],10,100);
+showChart("#femaleChart3",['#c2d749', '#E8E8E8'],30,100);
+
+
 
 var chart = new ApexCharts(document.querySelector('#chart'), options);
 var chart2 = new ApexCharts(document.querySelector('#chart2'), options2);
 var chart3 = new ApexCharts(document.querySelector('#chart3'), options3);
+var chart4 = new ApexCharts(document.querySelector("#progressBar"), options4);
 
 chart.render();
 chart2.render();
 chart3.render();
+chart4.render();
+
