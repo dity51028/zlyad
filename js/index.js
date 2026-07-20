@@ -276,6 +276,85 @@ new ApexCharts(
 
 };
 
+var stat = {
+  series: [
+    {
+      name: "Check In",
+      data: [7, 9, 10, 9, 11, 12, 10]
+    },
+    {
+      name: "Check Out",
+      data: [1, 1, 1, 3, 2, 2, 1] // Extra height
+    }
+  ],
+
+  chart: {
+    type: "bar",
+    height: 350,
+    stacked: true,
+    toolbar: {
+      show: false
+    }
+  },
+
+  colors: ["#41C49A", "#BFE9DD"],
+
+  plotOptions: {
+    bar: {
+      borderRadius: 12,
+      columnWidth: "35%"
+    }
+  },
+
+  dataLabels: {
+    enabled: false
+  },
+
+  stroke: {
+    show: false
+  },
+
+  xaxis: {
+    categories: [
+      "SEP 10",
+      "SEP 11",
+      "SEP 12",
+      "SEP 13",
+      "SEP 14",
+      "SEP 15",
+      "SEP 16"
+    ]
+  },
+
+  yaxis: {
+    min: 0,
+    max: 16,
+    tickAmount: 4
+  },
+
+  grid: {
+    borderColor: "#e9ecef",
+    strokeDashArray: 4
+  },
+
+  legend: {
+    position: "top",
+    horizontalAlign: "right",
+    markers: {
+      radius: 12
+    }
+  },
+
+  fill: {
+    opacity: 1
+  }
+};
+
+
+
+
+
+
 showChart("#maleChart",['#3dac8b', '#E8E8E8'],10,100);
 showChart("#femaleChart",['#c2d749', '#E8E8E8'],30,100);
 showChart("#maleChart2",['#3dac8b', '#E8E8E8'],10,100);
@@ -289,9 +368,16 @@ var chart = new ApexCharts(document.querySelector('#chart'), options);
 var chart2 = new ApexCharts(document.querySelector('#chart2'), options2);
 var chart3 = new ApexCharts(document.querySelector('#chart3'), options3);
 var chart4 = new ApexCharts(document.querySelector("#progressBar"), options4);
+var chart6 = new ApexCharts(
+  document.querySelector("#statistics"),
+  stat
+);
+
 
 chart.render();
 chart2.render();
 chart3.render();
 chart4.render();
+chart6.render();
+
 
