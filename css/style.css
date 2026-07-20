@@ -368,3 +368,9 @@ a{
 .table{
     width: 560px;
 }
+
+.zone{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
